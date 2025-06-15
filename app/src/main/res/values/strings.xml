@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Safwan</string>
+    <string name="google_maps_key">ADD_MAPS_APIKEY_HERE</string>
+    <!-- NOTE: API key removed for security. -->
 </resources>

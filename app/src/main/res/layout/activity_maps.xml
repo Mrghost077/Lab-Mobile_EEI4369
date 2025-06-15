@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Address Input Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Address (e.g., Times Square, New York)"
+            android:inputType="text"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnShowLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:padding="16dp"
+            android:text="Show Location"
+            android:textColor="#FDFBFB"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Map Container -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter an address and tap 'Show Location'"
+        android:textAlignment="center"
+        android:padding="12dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        android:background="@color/design_default_color_surface" />
+
+    <Button
+        android:id="@+id/btnToSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:textColor="#FDFBFB"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:text="Check Temperature" />
+
+</LinearLayout>
